@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topological DFS Traveler</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+  <body style="background: linear-gradient(to right, rgb(234, 118, 215), rgb(89, 96, 175));">
+
+
+  <h1>Topological DFS Web Traveler</h1>
+  <div class="graph-container">
+    <svg id="svg-edges"></svg>
+    <div id="graph"></div>
+  </div>
+
+  <button onclick="startTopologicalDFS()">Start Topo DFS</button>
+
+  <h2>Topological Order:</h2>
+  <p id="topo-order"></p>
+  <audio id="visit-sound" src="sounds/visit.mp3" preload="auto"></audio>
+
+
+  <script src="script2.js"></script>
+</body>
+</html>

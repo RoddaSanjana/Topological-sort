@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #e43737;
+  background-color: #34495e;
+  margin: 30px;
+}
+
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.graph-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#graph {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#svg-edges {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.node {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid #666;
+  font-weight: bold;
+  z-index: 1;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.visited {
+  background-color: #4caf50;
+  color: white;
+  transform: scale(1.1);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#topo-order {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+/* Reset and base styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #120101;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #170101;
+  margin-top: 30px;
+}
+
+.graph-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: 0 auto 30px;
+  border: 2px dashed #011415;
+  background: linear-gradient(to right, rgb(239, 167, 225), rgb(241, 151, 83));
+  /* background-color: #a4de6a; */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+#svg-edges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#graph {
+  position: relative;
+  z-index: 1;
+}
+
+/* Node style (assumes nodes are divs created in JS) */
+.node {
+  position: absolute;
+  background-color: #3498db;
+  color: rgb(20, 1, 1);
+  padding: 8px 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.node.visited {
+  background-color: #27ae60 !important;
+  transform: scale(1.1);
+}
+
+.node.current {
+  background-color: #de5545 !important;
+  transform: scale(1.2);
+}
+
+/* Button */
+button {
+  background-color: #de374d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1abc9c;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Topo Order Display */
+#topo-order {
+  font-size: 1.2rem;
+  color: #010810;
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 30px;
+  transition: opacity 0.3s;
+}
+
+/* Optional: Animation for topo order update */
+#topo-order.flash {
+  animation: flash 0.8s ease-in-out;
+}
+
+@keyframes flash {
+  0% { background-color: #deebec; }
+  100% { background-color: transparent; }
+}
+.node {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.node.visited {
+  background-color: rgb(85, 231, 236) !important; /* or use stroke/fill for SVG */
+  transform: scale(1.2);
+  border: 2px solid #000;
+}
